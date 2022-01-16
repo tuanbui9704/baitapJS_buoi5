@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <section>
+      <h1>Bài 1</h1>
+      <br />
+      <h1>Điểm Chuẩn của hội đồng là 21</h1>
+      <div class="input-group flex-nowrap">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="addon-wrapping">Môn Thứ 1</span>
+        </div>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Nhập điểm môn thứ 1"
+          aria-label="Username"
+          aria-describedby="addon-wrapping"
+          id="diemMonThu1"
+        />
+      </div>
+      <div class="input-group flex-nowrap">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="addon-wrapping">Môn Thứ 2</span>
+        </div>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Nhập điểm môn thứ 2"
+          aria-label="Username"
+          aria-describedby="addon-wrapping"
+          id="diemMonThu2"
+        />
+      </div>
+      <div class="input-group flex-nowrap">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="addon-wrapping">Môn Thứ 3</span>
+        </div>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Nhập điểm môn thứ 3"
+          aria-label="Username"
+          aria-describedby="addon-wrapping"
+          id="diemMonThu3"
+        />
+      </div>
+      <br />
+      <br />
+      <h2>Chọn khu vực ưu tiên</h2>
+      <label for="">Khu vực A</label>
+      <input type="radio" value="khuA" name="khuVuc" id="khuVucA" checked />
+      <label for="">Khu vực B</label>
+      <input type="radio" value="khuB" name="khuVuc" id="khuVucB" checked />
+      <br />
+      <label for="">Khu vực C</label>
+      <input type="radio" value="khuC" name="khuVuc" id="khuVucC" checked />
+      <label for="">Ko Có</label>
+      <input
+        type="radio"
+        value="khuNone"
+        name="khuVuc"
+        id="khuVucNone"
+        checked
+      />
+      <br />
+      <br />
+      <h2>Đối Tượng Ưu Tiên</h2>
+      <label for="">Đối Tượng 1</label>
+      <input
+        type="radio"
+        value="doiTuong1"
+        name="doiTuong"
+        id="doiTuong1"
+        checked
+      />
+      <label for="">Đối Tượng 2</label>
+      <input
+        type="radio"
+        value="doiTuong2"
+        name="doiTuong"
+        id="doiTuong2"
+        checked
+      />
+      <br />
+      <label for="">Đối Tượng 3</label>
+      <input
+        type="radio"
+        value="doiTuong3"
+        name="doiTuong"
+        id="doiTuong3"
+        checked
+      />
+      <label for="">Đối Tượng 0</label>
+      <input
+        type="radio"
+        value="doiTuong0"
+        name="doiTuong"
+        id="doiTuong0"
+        checked
+      />
+      <br />
+      <br />
+      <a
+        onclick="ketQua1()"
+        name=""
+        id=""
+        class="btn btn-primary"
+        href="#"
+        role="button"
+        >Xem kết quả</a
+      >
+      <br />
+      <br />
+      <p id="tongDiem"></p>
+    </section>
+    <br />
+    <section>
+      <h1>Bài 2</h1>
+      <br />
+      <div class="form-group">
+        <label for=""></label>
+        <input
+          type="text"
+          name=""
+          id="txtKW"
+          class="form-control"
+          placeholder="nhập số KW"
+          aria-describedby="helpId"
+        />
+      </div>
+      <br />
+      <p id="kQ"></p>
+      <br />
+      <button onclick="tinhTien()" class="btn btn-primary">Tính tiền</button>
+    </section>
+    <br />
+    <section>
+      <h1>Bài 3</h1>
+      <h3>Nhập tổng thu nhập</h3>
+      <br />
+      <div class="form-group">
+        <label for=""></label>
+        <input
+          type="text"
+          name=""
+          id="thuNhap"
+          class="form-control"
+          placeholder=""
+          aria-describedby="helpId"
+        />
+      </div>
+      <br />
+      <h3>Nhập số người phụ thuộc</h3>
+      <div class="form-group">
+        <label for=""></label>
+        <input
+          type="text"
+          name=""
+          id="soNguoi"
+          class="form-control"
+          placeholder=""
+          aria-describedby="helpId"
+        />
+      </div>
+      <br />
+      <button onclick="tinhThue()" class="btn btn-primary">Tính thuế</button>
+      <br />
+      <p id="kQ1"></p>
+    </section>
+    <br />
+    <section class="bt4">
+      <div class="py-5">
+        <h1>Bài 4</h1>
+        <form class="w-50 pt-4">
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <label class="input-group-text" for="bt4__customer"
+                >Khách hàng</label
+              >
+            </div>
+            <select class="custom-select" id="chonKh">
+              <option selected="" value="">---Chọn loại khách hàng---</option>
+
+              <option value="dn">Doanh Nghiệp</option>
+              <option value="nd">Nhà dân</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="soKetNoi"> Số kết nối </label>
+            <input type="number" class="form-control" id="soKetNoi" value="1" />
+          </div>
+          <div class="form-group">
+            <label for="soKenh"> Số kênh cao cấp </label>
+            <input type="number" class="form-control" id="soKenh" value="0" />
+          </div>
+
+          <button type="button" class="btn btn-primary" id="submit">
+            Tính
+          </button>
+          <div class="form-group pt-3">
+            <label for="ketQua"> Tổng tiền phải thanh toán</label>
+            <input type="text" class="form-control" id="ketQua" readonly="" />
+          </div>
+        </form>
+      </div>
+    </section>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./index.js"></script>
+    <script src="./index2.js"></script>
+    <script src="./index3.js"></script>
+    <script src="./index4.js"></script>
+  </body>
+</html>
